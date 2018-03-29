@@ -46,3 +46,5 @@ C:\Users\ALLIX Paul - Dev\Documents\Visual Studio 2015\Projects\ProjetOpinelPPE\
 C:\Users\ALLIX Paul - Dev\Documents\Visual Studio 2015\Projects\ProjetOpinelPPE\ProjetOpinelPPE\obj\Debug\ProjetOpinelPPE.vbproj.GenerateResource.Cache
 C:\Users\ALLIX Paul - Dev\Documents\Visual Studio 2015\Projects\ProjetOpinelPPE\ProjetOpinelPPE\obj\Debug\ProjetOpinelPPE.FrmEntrepriseAjout.resources
 C:\Users\ALLIX Paul - Dev\Documents\Visual Studio 2015\Projects\ProjetOpinelPPE\ProjetOpinelPPE\obj\Debug\ProjetOpinelPPE.FrmEntrepriseEdition.resources
+C:\Users\ALLIX Paul - Dev\Documents\Visual Studio 2015\Projects\ProjetOpinelPPE\ProjetOpinelPPE\obj\Debug\ProjetOpinelPPE.FrmPaysAjout.resources
+C:\Users\ALLIX Paul - Dev\Documents\Visual Studio 2015\Projects\ProjetOpinelPPE\ProjetOpinelPPE\obj\Debug\ProjetOpinelPPE.FrmContactAjout.resources

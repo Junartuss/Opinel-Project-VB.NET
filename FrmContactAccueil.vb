@@ -97,4 +97,74 @@ Public Class FrmContactAccueil
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         FrmEntrepriseAjout.Show()
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        VariableDatabaseConnexion.Open()
+
+        DatabaseQuery = New MySqlCommand()
+        DatabaseQuery.Connection = VariableDatabaseConnexion
+        DatabaseQuery.CommandText = "DELETE FROM ENTREPRISE WHERE RaisonSociale='" & ComboBox1.Text & "'"
+        DatabaseQuery.ExecuteNonQuery()
+        MsgBox("L'entreprise a bien été supprimé !", +vbInformation, "Supression Entreprise")
+
+        VariableDatabaseConnexion.Close()
+        refreshEntreprise()
+    End Sub
+
+    Private Sub refreshEntreprise()
+        DataGridView1.Rows.Clear()
+        VariableDatabaseConnexion.Open()
+
+        DatabaseQuery = New MySqlCommand()
+        DatabaseQuery.Connection = VariableDatabaseConnexion
+        DatabaseQuery.CommandText = "SELECT IdContact, NomContact, PrenomContact, RaisonSociale FROM CONTACT C, ENTREPRISE E WHERE C.IdEntreprise = E.IdEntreprise"
+
+
+        ContactEnregistrer = DatabaseQuery.ExecuteReader()
+
+        While ContactEnregistrer.Read
+            DataGridView1.Rows.Add(ContactEnregistrer.GetValue(0), ContactEnregistrer.GetValue(1), ContactEnregistrer.GetValue(2), ContactEnregistrer.GetValue(3))
+        End While
+
+        DataGridView1.AutoResizeColumns()
+
+        ContactEnregistrer.Close()
+
+        ComboBox1.Items.Clear()
+
+        DatabaseQuery = New MySqlCommand()
+        DatabaseQuery.Connection = VariableDatabaseConnexion
+        DatabaseQuery.CommandText = "SELECT RaisonSociale FROM ENTREPRISE"
+
+        ContactEnregistrer = DatabaseQuery.ExecuteReader()
+
+        While ContactEnregistrer.Read
+            ComboBox1.Items.Add(ContactEnregistrer.GetValue(0))
+        End While
+
+        ContactEnregistrer.Close()
+        VariableDatabaseConnexion.Close()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        FrmPaysAjout.Show()
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        FrmContactAjout.Show()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        idContact = DataGridView1.SelectedCells.Item(0).Value
+        VariableDatabaseConnexion.Open()
+
+        DatabaseQuery = New MySqlCommand()
+        DatabaseQuery.Connection = VariableDatabaseConnexion
+        DatabaseQuery.CommandText = "DELETE FROM CONTACT WHERE IdContact=" & idContact
+        DatabaseQuery.ExecuteNonQuery()
+        MsgBox("Le contact a bien été supprimé !", +vbInformation, "Suppression Contact")
+
+        VariableDatabaseConnexion.Close()
+        refreshEntreprise()
+    End Sub
 End Class

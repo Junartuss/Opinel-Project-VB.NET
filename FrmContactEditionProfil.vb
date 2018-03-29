@@ -42,33 +42,37 @@ Public Class FrmContactEditionProfil
 
         ContactEnregistrer.Close()
 
-        DatabaseQuery = New MySqlCommand()
-        DatabaseQuery.Connection = VariableDatabaseConnexion
-        DatabaseQuery.CommandText = "SELECT IdAction, DateAction, Commentaire, ARelancer, DateRelance, LibTypeAction FROM ACTION A, TYPE_ACTION TA WHERE A.IdTypeAction = TA.IdTypeAction AND IdContact=" & idContact
+        Try
+            DatabaseQuery = New MySqlCommand()
+            DatabaseQuery.Connection = VariableDatabaseConnexion
+            DatabaseQuery.CommandText = "SELECT IdAction, DateAction, Commentaire, ARelancer, DateRelance, LibTypeAction FROM ACTION A, TYPE_ACTION TA WHERE A.IdTypeAction = TA.IdTypeAction AND IdContact=" & idContact
 
-        ContactEnregistrer = DatabaseQuery.ExecuteReader()
+            ContactEnregistrer = DatabaseQuery.ExecuteReader()
 
-        'Style DataGridView
-        DataGridView1.ColumnCount = 6
-        DataGridView1.ColumnHeadersVisible = True
-        DataGridView1.Columns(5).Visible = False
+            'Style DataGridView
+            DataGridView1.ColumnCount = 6
+            DataGridView1.ColumnHeadersVisible = True
+            DataGridView1.Columns(5).Visible = False
 
-        DataGridView1.Columns(0).Name = "Date Action"
-        DataGridView1.Columns(1).Name = "Commentaire"
-        DataGridView1.Columns(2).Name = "A Relancer"
-        DataGridView1.Columns(3).Name = "Date de Relance"
-        DataGridView1.Columns(4).Name = "Type D'action"
-        'Fin Style DataGridView
+            DataGridView1.Columns(0).Name = "Date Action"
+            DataGridView1.Columns(1).Name = "Commentaire"
+            DataGridView1.Columns(2).Name = "A Relancer"
+            DataGridView1.Columns(3).Name = "Date de Relance"
+            DataGridView1.Columns(4).Name = "Type D'action"
+            'Fin Style DataGridView
 
-        While ContactEnregistrer.Read()
-            DataGridView1.Rows.Add(ContactEnregistrer.GetValue(1), ContactEnregistrer.GetValue(2), ContactEnregistrer.GetValue(3), ContactEnregistrer.GetValue(4), ContactEnregistrer.GetValue(5), ContactEnregistrer.GetValue(0))
-        End While
+            While ContactEnregistrer.Read()
+                DataGridView1.Rows.Add(ContactEnregistrer.GetValue(1), ContactEnregistrer.GetValue(2), ContactEnregistrer.GetValue(3), ContactEnregistrer.GetValue(4), ContactEnregistrer.GetValue(5), ContactEnregistrer.GetValue(0))
+            End While
 
-        DataGridView1.AutoResizeColumns()
+            DataGridView1.AutoResizeColumns()
 
-        idAction = ContactEnregistrer.GetValue(0)
+            idAction = DataGridView1.SelectedCells.Item(5).Value
 
-        ContactEnregistrer.Close()
+            ContactEnregistrer.Close()
+        Catch ex As Exception
+
+        End Try
 
         VariableDatabaseConnexion.Close()
 

@@ -85,6 +85,12 @@
       <DependentUpon>FrmContactAccueil.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmContactAjout.Designer.vb">
+      <DependentUpon>FrmContactAjout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContactAjout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmContactEditionProfil.Designer.vb">
       <DependentUpon>FrmContactEditionProfil.vb</DependentUpon>
     </Compile>
@@ -101,6 +107,12 @@
       <DependentUpon>FrmEntrepriseEdition.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmEntrepriseEdition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaysAjout.Designer.vb">
+      <DependentUpon>FrmPaysAjout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaysAjout.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -123,6 +135,9 @@
     <EmbeddedResource Include="FrmContactAccueil.resx">
       <DependentUpon>FrmContactAccueil.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmContactAjout.resx">
+      <DependentUpon>FrmContactAjout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmContactEditionProfil.resx">
       <DependentUpon>FrmContactEditionProfil.vb</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEntrepriseEdition.resx">
       <DependentUpon>FrmEntrepriseEdition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaysAjout.resx">
+      <DependentUpon>FrmPaysAjout.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

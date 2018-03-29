@@ -137,6 +137,7 @@ Partial Class FrmEntrepriseAjout
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(97, 167)
         Me.ComboBox1.Name = "ComboBox1"
@@ -148,9 +149,9 @@ Partial Class FrmEntrepriseAjout
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(12, 170)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(58, 13)
+        Me.Label7.Size = New System.Drawing.Size(30, 13)
         Me.Label7.TabIndex = 13
-        Me.Label7.Text = "Code Pays"
+        Me.Label7.Text = "Pays"
         '
         'Button1
         '

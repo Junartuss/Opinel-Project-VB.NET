@@ -49,8 +49,8 @@ Partial Class FrmContactEditionProfil
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -269,12 +269,12 @@ Partial Class FrmContactEditionProfil
         '
         'ComboBox2
         '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(155, 159)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(214, 21)
         Me.ComboBox2.TabIndex = 3
-        Me.ComboBox2.Text = "Choisir une action"
         '
         'DateTimePicker1
         '
@@ -285,13 +285,13 @@ Partial Class FrmContactEditionProfil
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Oui", "Non"})
         Me.ComboBox1.Location = New System.Drawing.Point(155, 106)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(214, 21)
         Me.ComboBox1.TabIndex = 1
-        Me.ComboBox1.Text = "Oui"
         '
         'TextBox1
         '
@@ -312,6 +312,16 @@ Partial Class FrmContactEditionProfil
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Action Finaliser"
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(583, 16)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(150, 13)
+        Me.LinkLabel1.TabIndex = 1
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Supprimer l'action sélectionner"
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -326,16 +336,6 @@ Partial Class FrmContactEditionProfil
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(715, 144)
         Me.DataGridView1.TabIndex = 0
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(583, 16)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(150, 13)
-        Me.LinkLabel1.TabIndex = 1
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Supprimer l'action sélectionner"
         '
         'FrmContactEditionProfil
         '
@@ -378,7 +378,6 @@ Partial Class FrmContactEditionProfil
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Label11 As Label
@@ -387,4 +386,5 @@ Partial Class FrmContactEditionProfil
     Friend WithEvents Label8 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

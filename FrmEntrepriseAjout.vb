@@ -22,29 +22,35 @@ Public Class FrmEntrepriseAjout
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim codePays As String
-        VariableDatabaseConnexion.Open()
+        If nomEntreprise.Text <> "" And adresseEntreprise.Text <> "" And codePostalEntreprise.Text <> "" And villeEntreprise.Text <> "" And telephoneEntreprise.Text <> "" And mailEntreprise.Text <> "" And ComboBox1.Text <> "" Then
+            Dim codePays As String
+            VariableDatabaseConnexion.Open()
 
-        'Récupérer Code Pays
+            'Récupérer Code Pays
 
-        DatabaseQuery = New MySqlCommand()
-        DatabaseQuery.Connection = VariableDatabaseConnexion
-        DatabaseQuery.CommandText = "SELECT CodePays FROM PAYS WHERE Libpays='" & ComboBox1.Text & "'"
-        ContactEnregistrer = DatabaseQuery.ExecuteReader()
-        ContactEnregistrer.Read()
-        codePays = ContactEnregistrer.GetValue(0)
-        ContactEnregistrer.Close()
+            DatabaseQuery = New MySqlCommand()
+            DatabaseQuery.Connection = VariableDatabaseConnexion
+            DatabaseQuery.CommandText = "SELECT CodePays FROM PAYS WHERE Libpays='" & ComboBox1.Text & "'"
+            ContactEnregistrer = DatabaseQuery.ExecuteReader()
+            ContactEnregistrer.Read()
+            codePays = ContactEnregistrer.GetValue(0)
+            ContactEnregistrer.Close()
 
-        'Insertion Nouvelle Entreprise
+            'Insertion Nouvelle Entreprise
 
-        DatabaseQuery = New MySqlCommand()
-        DatabaseQuery.Connection = VariableDatabaseConnexion
-        DatabaseQuery.CommandText = "INSERT INTO ENTREPRISE (RaisonSociale, AdresseRue, CodePostal, Ville, TelStandard, Mail, CodePays) VALUES('" & nomEntreprise.Text & "', '" & adresseEntreprise.Text & "', '" & codePostalEntreprise.Text & "', '" & villeEntreprise.Text & "', '" & telephoneEntreprise.Text & "', '" & mailEntreprise.Text & "', '" & codePays & "')"
-        DatabaseQuery.ExecuteNonQuery()
-        MsgBox("L'entreprise a bien été ajouter !", +vbInformation, "Entreprise : " & nomEntreprise.Text)
+            DatabaseQuery = New MySqlCommand()
+            DatabaseQuery.Connection = VariableDatabaseConnexion
+            DatabaseQuery.CommandText = "INSERT INTO ENTREPRISE (RaisonSociale, AdresseRue, CodePostal, Ville, TelStandard, Mail, CodePays) VALUES('" & nomEntreprise.Text & "', '" & adresseEntreprise.Text & "', '" & codePostalEntreprise.Text & "', '" & villeEntreprise.Text & "', '" & telephoneEntreprise.Text & "', '" & mailEntreprise.Text & "', '" & codePays & "')"
+            DatabaseQuery.ExecuteNonQuery()
+            MsgBox("L'entreprise a bien été ajouter !", +vbInformation, "Entreprise : " & nomEntreprise.Text)
 
-        VariableDatabaseConnexion.Close()
-        refreshEntreprise()
+            VariableDatabaseConnexion.Close()
+            refreshEntreprise()
+            Me.Close()
+        Else
+            MsgBox("Veuillez remplir tous les champs !", +vbCritical, "Erreur")
+        End If
+
     End Sub
 
     Private Sub refreshEntreprise()

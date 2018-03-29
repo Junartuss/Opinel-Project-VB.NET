@@ -45,6 +45,7 @@ Public Class FrmEntrepriseEdition
 
         VariableDatabaseConnexion.Close()
         refreshEntrepriseAccueilContact()
+        Me.Close()
     End Sub
 
     Private Sub refreshEntrepriseAccueilContact()

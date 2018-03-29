@@ -23,9 +23,12 @@ Partial Class FrmContactAccueil
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -33,7 +36,6 @@ Partial Class FrmContactAccueil
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -42,6 +44,8 @@ Partial Class FrmContactAccueil
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button7)
+        Me.GroupBox1.Controls.Add(Me.Button6)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -50,6 +54,24 @@ Partial Class FrmContactAccueil
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listes des contacts"
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(377, 108)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(120, 37)
+        Me.Button7.TabIndex = 5
+        Me.Button7.Text = "Ajouter le contact"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(377, 65)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(120, 37)
+        Me.Button6.TabIndex = 4
+        Me.Button6.Text = "Supprimer le contact"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -89,6 +111,15 @@ Partial Class FrmContactAccueil
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Entreprise"
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(10, 80)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(243, 25)
+        Me.Button5.TabIndex = 4
+        Me.Button5.Text = "Supprimer une entreprise"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(9, 126)
@@ -118,6 +149,7 @@ Partial Class FrmContactAccueil
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(66, 19)
         Me.ComboBox1.Name = "ComboBox1"
@@ -152,15 +184,6 @@ Partial Class FrmContactAccueil
         Me.ListBox1.Size = New System.Drawing.Size(242, 238)
         Me.ListBox1.TabIndex = 0
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(10, 80)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(243, 25)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Supprimer une entreprise"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'FrmContactAccueil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -191,4 +214,6 @@ Partial Class FrmContactAccueil
     Friend WithEvents Button4 As Button
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button6 As Button
 End Class
