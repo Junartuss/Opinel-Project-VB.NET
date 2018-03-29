@@ -93,4 +93,8 @@ Public Class FrmContactAccueil
             MsgBox("Veuillez sélectionner une entreprise", +vbCritical, "Entreprise")
         End If
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        FrmEntrepriseAjout.Show()
+    End Sub
 End Class

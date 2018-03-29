@@ -23,16 +23,16 @@ Partial Class FrmEntrepriseAjout
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.codePostalEntreprise = New System.Windows.Forms.TextBox()
+        Me.telephoneEntreprise = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.villeEntreprise = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.nomEntreprise = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.adresseEntreprise = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.mailEntreprise = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -48,19 +48,19 @@ Partial Class FrmEntrepriseAjout
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nom Entreprise"
         '
-        'TextBox1
+        'codePostalEntreprise
         '
-        Me.TextBox1.Location = New System.Drawing.Point(97, 59)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(175, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.codePostalEntreprise.Location = New System.Drawing.Point(97, 59)
+        Me.codePostalEntreprise.Name = "codePostalEntreprise"
+        Me.codePostalEntreprise.Size = New System.Drawing.Size(175, 20)
+        Me.codePostalEntreprise.TabIndex = 1
         '
-        'TextBox2
+        'telephoneEntreprise
         '
-        Me.TextBox2.Location = New System.Drawing.Point(97, 111)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(175, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.telephoneEntreprise.Location = New System.Drawing.Point(97, 111)
+        Me.telephoneEntreprise.Name = "telephoneEntreprise"
+        Me.telephoneEntreprise.Size = New System.Drawing.Size(175, 20)
+        Me.telephoneEntreprise.TabIndex = 3
         '
         'Label2
         '
@@ -71,12 +71,12 @@ Partial Class FrmEntrepriseAjout
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Téléphone"
         '
-        'TextBox3
+        'villeEntreprise
         '
-        Me.TextBox3.Location = New System.Drawing.Point(97, 85)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(175, 20)
-        Me.TextBox3.TabIndex = 5
+        Me.villeEntreprise.Location = New System.Drawing.Point(97, 85)
+        Me.villeEntreprise.Name = "villeEntreprise"
+        Me.villeEntreprise.Size = New System.Drawing.Size(175, 20)
+        Me.villeEntreprise.TabIndex = 5
         '
         'Label3
         '
@@ -87,12 +87,12 @@ Partial Class FrmEntrepriseAjout
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Ville"
         '
-        'TextBox4
+        'nomEntreprise
         '
-        Me.TextBox4.Location = New System.Drawing.Point(97, 7)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(175, 20)
-        Me.TextBox4.TabIndex = 7
+        Me.nomEntreprise.Location = New System.Drawing.Point(97, 7)
+        Me.nomEntreprise.Name = "nomEntreprise"
+        Me.nomEntreprise.Size = New System.Drawing.Size(175, 20)
+        Me.nomEntreprise.TabIndex = 7
         '
         'Label4
         '
@@ -103,12 +103,12 @@ Partial Class FrmEntrepriseAjout
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Code Postal"
         '
-        'TextBox5
+        'adresseEntreprise
         '
-        Me.TextBox5.Location = New System.Drawing.Point(97, 33)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(175, 20)
-        Me.TextBox5.TabIndex = 9
+        Me.adresseEntreprise.Location = New System.Drawing.Point(97, 33)
+        Me.adresseEntreprise.Name = "adresseEntreprise"
+        Me.adresseEntreprise.Size = New System.Drawing.Size(175, 20)
+        Me.adresseEntreprise.TabIndex = 9
         '
         'Label5
         '
@@ -119,12 +119,12 @@ Partial Class FrmEntrepriseAjout
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Adresse"
         '
-        'TextBox6
+        'mailEntreprise
         '
-        Me.TextBox6.Location = New System.Drawing.Point(97, 138)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(175, 20)
-        Me.TextBox6.TabIndex = 11
+        Me.mailEntreprise.Location = New System.Drawing.Point(97, 138)
+        Me.mailEntreprise.Name = "mailEntreprise"
+        Me.mailEntreprise.Size = New System.Drawing.Size(175, 20)
+        Me.mailEntreprise.TabIndex = 11
         '
         'Label6
         '
@@ -169,17 +169,17 @@ Partial Class FrmEntrepriseAjout
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.mailEntreprise)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.adresseEntreprise)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.nomEntreprise)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.villeEntreprise)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.telephoneEntreprise)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.codePostalEntreprise)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmEntrepriseAjout"
         Me.Text = "FrmEntrepriseAjout"
@@ -189,16 +189,16 @@ Partial Class FrmEntrepriseAjout
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents codePostalEntreprise As TextBox
+    Friend WithEvents telephoneEntreprise As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents villeEntreprise As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents nomEntreprise As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents adresseEntreprise As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents mailEntreprise As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label7 As Label
