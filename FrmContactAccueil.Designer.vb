@@ -33,6 +33,7 @@ Partial Class FrmContactAccueil
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -76,20 +77,21 @@ Partial Class FrmContactAccueil
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Button5)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Location = New System.Drawing.Point(526, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(259, 117)
+        Me.GroupBox2.Size = New System.Drawing.Size(259, 157)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Entreprise"
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(9, 80)
+        Me.Button3.Location = New System.Drawing.Point(9, 126)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(243, 25)
         Me.Button3.TabIndex = 3
@@ -126,7 +128,7 @@ Partial Class FrmContactAccueil
         '
         Me.GroupBox3.Controls.Add(Me.Button4)
         Me.GroupBox3.Controls.Add(Me.ListBox1)
-        Me.GroupBox3.Location = New System.Drawing.Point(526, 140)
+        Me.GroupBox3.Location = New System.Drawing.Point(526, 185)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(258, 305)
         Me.GroupBox3.TabIndex = 3
@@ -150,11 +152,20 @@ Partial Class FrmContactAccueil
         Me.ListBox1.Size = New System.Drawing.Size(242, 238)
         Me.ListBox1.TabIndex = 0
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(10, 80)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(243, 25)
+        Me.Button5.TabIndex = 4
+        Me.Button5.Text = "Supprimer une entreprise"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'FrmContactAccueil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(797, 465)
+        Me.ClientSize = New System.Drawing.Size(797, 502)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -179,4 +190,5 @@ Partial Class FrmContactAccueil
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Button4 As Button
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Button5 As Button
 End Class
