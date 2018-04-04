@@ -11,6 +11,8 @@ Public Class FrmContactAccueil
         ConnexionDatabase()
         VariableDatabaseConnexion.Open()
 
+        'Afficher 
+
         'Début Afficher tous les contacts
 
         DatabaseQuery = New MySqlCommand()
@@ -66,6 +68,7 @@ Public Class FrmContactAccueil
 
         While ContactEnregistrer.Read
             ComboBox1.Items.Add(ContactEnregistrer.GetValue(0))
+            ComboBox2.Items.Add(ContactEnregistrer.GetValue(0))
         End While
 
         ContactEnregistrer.Close()
@@ -99,16 +102,20 @@ Public Class FrmContactAccueil
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        VariableDatabaseConnexion.Open()
 
-        DatabaseQuery = New MySqlCommand()
-        DatabaseQuery.Connection = VariableDatabaseConnexion
-        DatabaseQuery.CommandText = "DELETE FROM ENTREPRISE WHERE RaisonSociale='" & ComboBox1.Text & "'"
-        DatabaseQuery.ExecuteNonQuery()
-        MsgBox("L'entreprise a bien été supprimé !", +vbInformation, "Supression Entreprise")
+        Dim resMsgBox = MsgBox("Voulez vous vraiment supprimer l'entreprise : " & vbCrLf & ComboBox1.Text, +vbCritical + vbYesNo, "Supprimer")
+        If (resMsgBox = vbYes) Then
+            VariableDatabaseConnexion.Open()
 
-        VariableDatabaseConnexion.Close()
-        refreshEntreprise()
+            DatabaseQuery = New MySqlCommand()
+            DatabaseQuery.Connection = VariableDatabaseConnexion
+            DatabaseQuery.CommandText = "DELETE FROM ENTREPRISE WHERE RaisonSociale='" & ComboBox1.Text & "'"
+            DatabaseQuery.ExecuteNonQuery()
+            MsgBox("L'entreprise a bien été supprimé !", +vbInformation, "Supression Entreprise")
+
+            VariableDatabaseConnexion.Close()
+            refreshEntreprise()
+        End If
     End Sub
 
     Private Sub refreshEntreprise()
@@ -131,6 +138,7 @@ Public Class FrmContactAccueil
         ContactEnregistrer.Close()
 
         ComboBox1.Items.Clear()
+        ComboBox2.Items.Clear()
 
         DatabaseQuery = New MySqlCommand()
         DatabaseQuery.Connection = VariableDatabaseConnexion
@@ -140,6 +148,7 @@ Public Class FrmContactAccueil
 
         While ContactEnregistrer.Read
             ComboBox1.Items.Add(ContactEnregistrer.GetValue(0))
+            ComboBox2.Items.Add(ContactEnregistrer.GetValue(0))
         End While
 
         ContactEnregistrer.Close()
@@ -150,21 +159,53 @@ Public Class FrmContactAccueil
         FrmPaysAjout.Show()
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        FrmContactAjout.Show()
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim resContactMsgBox = MsgBox("Voulez vous vraiment supprimer le contact : " & vbCrLf & DataGridView1.SelectedCells.Item(1).Value & " " & DataGridView1.SelectedCells.Item(2).Value, +vbCritical + +vbYesNo, "Suppression")
+        If (resContactMsgBox = vbYes) Then
+            idContact = DataGridView1.SelectedCells.Item(0).Value
+            VariableDatabaseConnexion.Open()
+
+            DatabaseQuery = New MySqlCommand()
+            DatabaseQuery.Connection = VariableDatabaseConnexion
+            DatabaseQuery.CommandText = "DELETE FROM CONTACT WHERE IdContact=" & idContact
+            DatabaseQuery.ExecuteNonQuery()
+            MsgBox("Le contact a bien été supprimé !", +vbInformation, "Suppression Contact")
+
+            VariableDatabaseConnexion.Close()
+            refreshEntreprise()
+        End If
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        idContact = DataGridView1.SelectedCells.Item(0).Value
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        Dim filtreIdEntreprise As Integer
         VariableDatabaseConnexion.Open()
 
         DatabaseQuery = New MySqlCommand()
         DatabaseQuery.Connection = VariableDatabaseConnexion
-        DatabaseQuery.CommandText = "DELETE FROM CONTACT WHERE IdContact=" & idContact
-        DatabaseQuery.ExecuteNonQuery()
-        MsgBox("Le contact a bien été supprimé !", +vbInformation, "Suppression Contact")
+        DatabaseQuery.CommandText = "SELECT IdEntreprise FROM ENTREPRISE WHERE RaisonSociale='" & ComboBox2.Text & "'"
+        ContactEnregistrer = DatabaseQuery.ExecuteReader()
+        ContactEnregistrer.Read()
+        filtreIdEntreprise = ContactEnregistrer.GetValue(0)
+        ContactEnregistrer.Close()
+
+        DataGridView1.Rows.Clear()
+
+        DatabaseQuery = New MySqlCommand()
+        DatabaseQuery.Connection = VariableDatabaseConnexion
+        DatabaseQuery.CommandText = "SELECT IdContact, NomContact, PrenomContact, RaisonSociale FROM CONTACT C, ENTREPRISE E WHERE C.IdEntreprise = E.IdEntreprise AND C.IdEntreprise='" & filtreIdEntreprise & "'"
+
+        ContactEnregistrer = DatabaseQuery.ExecuteReader()
+
+        While ContactEnregistrer.Read
+            DataGridView1.Rows.Add(ContactEnregistrer.GetValue(0), ContactEnregistrer.GetValue(1), ContactEnregistrer.GetValue(2), ContactEnregistrer.GetValue(3))
+        End While
+
+        DataGridView1.AutoResizeColumns()
 
         VariableDatabaseConnexion.Close()
-        refreshEntreprise()
+    End Sub
+
+    Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
+        FrmContactAjout.Show()
     End Sub
 End Class

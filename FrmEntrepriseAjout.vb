@@ -57,6 +57,7 @@ Public Class FrmEntrepriseAjout
         VariableDatabaseConnexion.Open()
 
         FrmContactAccueil.ComboBox1.Items.Clear()
+        FrmContactAccueil.ComboBox2.Items.Clear()
 
         DatabaseQuery = New MySqlCommand()
         DatabaseQuery.Connection = VariableDatabaseConnexion
@@ -66,6 +67,7 @@ Public Class FrmEntrepriseAjout
 
         While ContactEnregistrer.Read
             FrmContactAccueil.ComboBox1.Items.Add(ContactEnregistrer.GetValue(0))
+            FrmContactAccueil.ComboBox2.Items.Add(ContactEnregistrer.GetValue(0))
         End While
 
         ContactEnregistrer.Close()

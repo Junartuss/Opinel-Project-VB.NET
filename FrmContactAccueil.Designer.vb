@@ -24,6 +24,8 @@ Partial Class FrmContactAccueil
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -31,7 +33,6 @@ Partial Class FrmContactAccueil
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -45,28 +46,52 @@ Partial Class FrmContactAccueil
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button7)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.ComboBox2)
         Me.GroupBox1.Controls.Add(Me.Button6)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.MenuText
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(503, 445)
+        Me.GroupBox1.Size = New System.Drawing.Size(503, 478)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listes des contacts"
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(377, 108)
+        Me.Button7.Location = New System.Drawing.Point(377, 144)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(120, 37)
-        Me.Button7.TabIndex = 5
-        Me.Button7.Text = "Ajouter le contact"
+        Me.Button7.TabIndex = 8
+        Me.Button7.Text = "Ajouter un contact"
         Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(120, 16)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Choisir une entreprise"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(132, 28)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(239, 24)
+        Me.ComboBox2.TabIndex = 6
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(377, 65)
+        Me.Button6.Location = New System.Drawing.Point(377, 101)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(120, 37)
         Me.Button6.TabIndex = 4
@@ -75,11 +100,11 @@ Partial Class FrmContactAccueil
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(377, 22)
+        Me.Button1.Location = New System.Drawing.Point(377, 58)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(120, 37)
         Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Editer les informations"
+        Me.Button1.Text = "Information Contact"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'DataGridView1
@@ -90,7 +115,7 @@ Partial Class FrmContactAccueil
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 22)
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 58)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -102,8 +127,8 @@ Partial Class FrmContactAccueil
         Me.GroupBox2.Controls.Add(Me.Button5)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(526, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(259, 157)
@@ -138,28 +163,20 @@ Partial Class FrmContactAccueil
         Me.Button2.Text = "Editer les informations"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Entreprise :"
-        '
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(66, 19)
+        Me.ComboBox1.Location = New System.Drawing.Point(10, 19)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(243, 24)
         Me.ComboBox1.TabIndex = 0
         '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Button4)
         Me.GroupBox3.Controls.Add(Me.ListBox1)
+        Me.GroupBox3.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(526, 185)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(258, 305)
@@ -179,9 +196,10 @@ Partial Class FrmContactAccueil
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(9, 20)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(242, 238)
+        Me.ListBox1.Size = New System.Drawing.Size(242, 228)
         Me.ListBox1.TabIndex = 0
         '
         'FrmContactAccueil
@@ -195,9 +213,9 @@ Partial Class FrmContactAccueil
         Me.Name = "FrmContactAccueil"
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -207,13 +225,14 @@ Partial Class FrmContactAccueil
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button3 As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Button4 As Button
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button7 As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button7 As Button
 End Class

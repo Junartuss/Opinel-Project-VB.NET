@@ -82,6 +82,7 @@ Partial Class FrmContactEditionProfil
         Me.GroupBox1.Controls.Add(Me.TextBoxPrenomContact)
         Me.GroupBox1.Controls.Add(Me.TextBoxNomContact)
         Me.GroupBox1.Controls.Add(Me.TextBoxTitreContact)
+        Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(352, 242)
@@ -103,7 +104,7 @@ Partial Class FrmContactEditionProfil
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(6, 178)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(54, 13)
+        Me.Label7.Size = New System.Drawing.Size(61, 16)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Entreprise"
         '
@@ -112,7 +113,7 @@ Partial Class FrmContactEditionProfil
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(6, 152)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(64, 13)
+        Me.Label6.Size = New System.Drawing.Size(65, 16)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Tel Portable"
         '
@@ -121,7 +122,7 @@ Partial Class FrmContactEditionProfil
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(6, 126)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 13)
+        Me.Label5.Size = New System.Drawing.Size(62, 16)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Tel Interne"
         '
@@ -130,7 +131,7 @@ Partial Class FrmContactEditionProfil
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(6, 100)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(26, 13)
+        Me.Label4.Size = New System.Drawing.Size(27, 16)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Mail"
         '
@@ -139,7 +140,7 @@ Partial Class FrmContactEditionProfil
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(6, 74)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 13)
+        Me.Label3.Size = New System.Drawing.Size(44, 16)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Prénom"
         '
@@ -148,7 +149,7 @@ Partial Class FrmContactEditionProfil
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 13)
+        Me.Label2.Size = New System.Drawing.Size(29, 16)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Nom"
         '
@@ -157,7 +158,7 @@ Partial Class FrmContactEditionProfil
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(6, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(28, 13)
+        Me.Label1.Size = New System.Drawing.Size(33, 16)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Titre"
         '
@@ -215,6 +216,7 @@ Partial Class FrmContactEditionProfil
         Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(391, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(375, 229)
@@ -236,7 +238,7 @@ Partial Class FrmContactEditionProfil
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(15, 162)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(71, 13)
+        Me.Label11.Size = New System.Drawing.Size(74, 16)
         Me.Label11.TabIndex = 7
         Me.Label11.Text = "Type d'action"
         '
@@ -245,7 +247,7 @@ Partial Class FrmContactEditionProfil
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(15, 139)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(83, 13)
+        Me.Label10.Size = New System.Drawing.Size(87, 16)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Date de relance"
         '
@@ -254,7 +256,7 @@ Partial Class FrmContactEditionProfil
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(15, 114)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(60, 13)
+        Me.Label9.Size = New System.Drawing.Size(59, 16)
         Me.Label9.TabIndex = 5
         Me.Label9.Text = "A Relancer"
         '
@@ -263,7 +265,7 @@ Partial Class FrmContactEditionProfil
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(15, 52)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(68, 13)
+        Me.Label8.Size = New System.Drawing.Size(74, 16)
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "Commentaire"
         '
@@ -273,7 +275,7 @@ Partial Class FrmContactEditionProfil
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(155, 159)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(214, 21)
+        Me.ComboBox2.Size = New System.Drawing.Size(214, 24)
         Me.ComboBox2.TabIndex = 3
         '
         'DateTimePicker1
@@ -290,7 +292,7 @@ Partial Class FrmContactEditionProfil
         Me.ComboBox1.Items.AddRange(New Object() {"Oui", "Non"})
         Me.ComboBox1.Location = New System.Drawing.Point(155, 106)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(214, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(214, 24)
         Me.ComboBox1.TabIndex = 1
         '
         'TextBox1
@@ -305,6 +307,7 @@ Partial Class FrmContactEditionProfil
         '
         Me.GroupBox3.Controls.Add(Me.LinkLabel1)
         Me.GroupBox3.Controls.Add(Me.DataGridView1)
+        Me.GroupBox3.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(12, 269)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(754, 186)
@@ -317,7 +320,7 @@ Partial Class FrmContactEditionProfil
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Location = New System.Drawing.Point(583, 16)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(150, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(162, 16)
         Me.LinkLabel1.TabIndex = 1
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Supprimer l'action sélectionner"
